@@ -57,7 +57,7 @@ public class LinkedIn {
                 myJobs[i++] = j;
             }
 
-            XMLHelper.Write(, myJobs);
+            XMLHelper.writeFromArray("LinkedIn", myJobs);
 
         } catch (IOException e) {
             e.printStackTrace();

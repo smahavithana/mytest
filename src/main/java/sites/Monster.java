@@ -58,7 +58,7 @@ public class Monster {
                 myJobs[i++] = j;
             }
 
-            XMLHelper.Write(, myJobs);
+            XMLHelper.writeFromArray("Moster", myJobs);
 
         } catch (IOException e) {
             e.printStackTrace();

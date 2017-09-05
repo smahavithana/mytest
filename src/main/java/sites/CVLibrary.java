@@ -74,13 +74,13 @@ public class CVLibrary {
                     }
                 }
 
-                //XMLHelper.Write(myJobs);
+                //XMLHelper.writeFromArray(myJobs);
 
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
-        XMLHelper.Write(, myJobs);
+        XMLHelper.writeFromArray("CVLibrary", myJobs);
     }
 
     public static String getJobDescription(String jobDetailsLink) throws Exception {

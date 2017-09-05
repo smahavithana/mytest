@@ -8,25 +8,25 @@ import org.jsoup.select.Elements;
 import util.DateHelper;
 import util.Helper;
 import util.XMLHelper;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
 /* *
  * Created by Sampath Mahavithana on 17/02/2017.
  */
-public class CWJobs {
-
+public class Totaljobs {
 
     static DateHelper dateHelper = new DateHelper();
     static Helper util = new Helper();
     static String jobExpiryDate = "1911772800";
-    static String site_url = "https://www.cwjobs.co.uk/jobs/qa?page=";
+    static String site_url = "https://www.totaljobs.com/jobs/qa?page=";
 
     public static void getJobs() throws Exception {
 
         int resultsPerPage = 10;
         int noOfJobs = getJobCount();
-        //int noOfJobs = 100;
+        //int noOfJobs = 10;
 
         int pages = noOfJobs/resultsPerPage;
         int i = 0;
@@ -85,7 +85,7 @@ public class CWJobs {
             }
         }
 
-        XMLHelper.writeFromArrayList("cwjobs", jobList);
+        XMLHelper.writeFromArrayList("totaljobs", jobList);
     }
 
     private static int getJobCount(){
@@ -94,7 +94,7 @@ public class CWJobs {
         try {
             Document doc = Jsoup.connect(site_url).get();
             Elements ele = doc.select("div.page-title");
-            no_of_jobs = Integer.parseInt(ele.select("span").text()) ;
+            no_of_jobs = Integer.parseInt(ele.select("span").text().replace(",","")) ;
         }
         catch (IOException e) {
             e.printStackTrace();

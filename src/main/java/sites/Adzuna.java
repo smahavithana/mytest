@@ -54,7 +54,7 @@ public class Adzuna {
                 myJobs[i++] = j;
             }
 
-            XMLHelper.Write(, myJobs);
+            XMLHelper.writeFromArray("Adzuna", myJobs);
 
         } catch (IOException e) {
             e.printStackTrace();

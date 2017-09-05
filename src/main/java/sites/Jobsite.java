@@ -56,7 +56,7 @@ public class Jobsite {
                 myJobs[i++] = j;
             }
 
-            XMLHelper.Write("jobsite", myJobs);
+            XMLHelper.writeFromArray("jobsite", myJobs);
 
         } catch (IOException e) {
             e.printStackTrace();

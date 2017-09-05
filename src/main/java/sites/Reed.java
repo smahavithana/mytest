@@ -57,7 +57,7 @@ public class Reed {
                 myJobs[i++] = j;
             }
 
-            XMLHelper.Write(, myJobs);
+            XMLHelper.writeFromArray("Reed", myJobs);
 
         } catch (IOException e) {
             e.printStackTrace();
