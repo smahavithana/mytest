@@ -1,8 +1,9 @@
 package com;
 
-import sites.CWJobs;
 import sites.*;
-import util.XMLHelper;
+import util.Helper;
+
+import javax.rmi.CORBA.Util;
 
 /* *
  * Created by sampathmahavithana on 12/01/2017.
@@ -13,9 +14,11 @@ public class Main {
     public static void main(String[] args) throws Exception {
 
         //Collect jobs from Search Results Pages
+        //CWJobs_bak.getJobs();
         //CWJobs.getJobs();
-        CWJobs_new.getJobs();
-        //Totaljobs.getJobs("https://www.totaljobs.com/jobs/qa");
+        //Totaljobs.getJobs();
+        Helper.getIntSalary("£30k - 35k per year + Benefits");
+        //Totaljobs_bak.getJobs("https://www.totaljobs.com/jobs/qa");
         //Jobsite.getJobs("http://www.jobsite.co.uk/vacancies?search_type=quick&query=qa");
         //JobServe.getJobs("https://www.jobserve.com/gb/en/JobSearch.aspx?shid=B634F62E155A6C5598"); //NOT IMPLEMENTED
         //Indeed.getJobs("https://www.indeed.co.uk/jobs?q=qa","permanent");
