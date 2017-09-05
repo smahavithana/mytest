@@ -13,7 +13,7 @@ import java.io.IOException;
 /* *
  * Created by Sampath on 17/02/2017.
  */
-public class Totaljobs {
+public class Totaljobs_bak {
 
     public static void getJobs(String jobsite) throws Exception {
 
@@ -54,7 +54,7 @@ public class Totaljobs {
                 myJobs[i++] = j;
             }
 
-            XMLHelper.writeFromArray("Totaljobs", myJobs);
+            XMLHelper.writeFromArray("Totaljobs_bak", myJobs);
 
         } catch (IOException e) {
             e.printStackTrace();
